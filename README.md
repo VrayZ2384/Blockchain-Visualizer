@@ -1,4 +1,4 @@
-# Blockchain Web Viewer
+# Blockchain Visualizer
 
 Welcome to the Blockchain Web Viewer project! This is a simple web-based application that allows you to interact with a blockchain. You can mine new blocks, check the validity of the blockchain, view the blockchain data.
 

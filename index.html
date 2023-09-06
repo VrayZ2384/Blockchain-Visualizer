@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blockchain Frontend</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link your CSS file -->
+    <script src="app.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Blockchain</h1>
+
+        <!-- Buttons Section -->
+        <div class="button-section">
+            <button class="button mine-button" onclick="mineBlock()">Mine Block</button>
+            <button class="button chain-button" onclick="getChain()">Get Chain</button>
+            <button class="button validate-button" onclick="checkValidityChain()">Check Validity</button>
+            <button class="button reset-button" onclick="resetBlockchain()">Reset Chain</button>
+        </div>
+
+        <!-- Display Chain as Scrolling Cards -->
+        <div class="blockchain" id="blockchain">
+            <!-- This is where new blocks will be added -->
+        </div>
+
+        <!-- Display Chain -->
+        <div class="chain" id="chain"></div>
+
+        <p><span id="response"></span></p>
+    
+    </div>
+</body>
+</html>

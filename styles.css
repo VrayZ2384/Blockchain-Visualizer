@@ -1,0 +1,124 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-image: url('blockchain-bg.jpeg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    background-color: rgba(255, 255, 255, 0.8);
+    max-width: 800px;
+    margin: 50px auto;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    color: #333;
+}
+
+h1 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: #007BFF;
+}
+
+.button-container {
+    position: sticky;
+    top: 0;
+    background-color: white; /* Set background color if needed */
+    z-index: 1; /* Ensure buttons are above other content */
+}
+
+.button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 5px;
+    color: #fff;
+}
+
+.mine-button {
+    background-color: #6EE7B7;
+}
+
+.chain-button {
+    background-color: #007BFF;
+}
+
+.validate-button {
+    background-color: #FF6B6B;
+}
+
+.reset-button {
+    background-color: #000; 
+    color: #fff; 
+}
+
+.button:hover {
+    transform: scale(1.05);
+    transition: transform 0.2s ease-in-out;
+}
+
+.chain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Styling for Blockchain Blocks */
+.blockchain {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 20px;
+    padding: 20px;
+}
+
+.block {
+    background-color: #f2f2f2;
+    border: 2px solid #333;
+    border-radius: 5px;
+    padding: 20px;
+    margin: 10px;
+    width: 100%; /* Extend the block width to fit the content */
+    text-align: left;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    box-sizing: border-box; /* Ensure padding doesn't increase width */
+}
+
+.block-title {
+    font-size: 20px;
+    color: #007BFF;
+}
+
+.block-content {
+    margin: 20px 0;
+}
+
+/* Add this CSS to your existing stylesheet */
+.block .block-content {
+    max-width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+
+.block-link {
+    text-decoration: none;
+    color: #fff;
+    background-color: #007BFF;
+    padding: 6px 12px;
+    border-radius: 8px;
+    transition: background 0.2s;
+}
+
+.block-link:hover {
+    background-color: #0056b3;
+}

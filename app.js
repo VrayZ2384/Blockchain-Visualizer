@@ -1,18 +1,17 @@
 
 function mineBlock() {
     {
-        // If no transaction is inputted, mine a block without a transaction
         fetch('http://localhost:5000/mine_block')
             .then(response => response.json())
             .then(data => {
-                displayMinedBlock(data); // Call the displayMinedBlock function
+                displayMinedBlock(data); 
             });
     }
 }
 
 // Function to check the validity of the blockchain
 function checkValidityChain() {
-    console.log('Checking Validity...'); // Add this line for debugging
+    console.log('Checking Validity...');
     fetch('http://localhost:5000/is_valid')
         .then(response => {
             if (!response.ok) {
@@ -33,7 +32,7 @@ function getChain() {
     fetch('http://localhost:5000/get_chain')
         .then(response => response.json())
         .then(data => {
-            displayChain(data.chain); // Call the displayChain function
+            displayChain(data.chain); 
         })
         .catch(error => {
             console.error('Error:', error);
@@ -81,12 +80,12 @@ function displayMinedBlock(data) {
 
 
 function displayValidity(data) {
-    console.log('Displaying Validity:', data.message); // Log the message to the console
+    console.log('Displaying Validity:', data.message); 
     const responseSpan = document.getElementById('response');
     responseSpan.textContent = '';
 
     const blockchainDiv = document.getElementById('blockchain');
-    blockchainDiv.innerHTML = ''; // Clear the blockchain container
+    blockchainDiv.innerHTML = ''; 
 
     const validityDiv = document.createElement('div');
     validityDiv.classList.add('block');
@@ -143,9 +142,8 @@ function resetBlockchain() {
     .then(response => response.json())
     .then(data => {
         console.log(data.message);
-        // After resetting, clear the blockchain container and fetch the updated blockchain
         const blockchainDiv = document.getElementById('blockchain');
-        blockchainDiv.innerHTML = ''; // Clear the blockchain container
+        blockchainDiv.innerHTML = ''; 
         getChain();
     })
     .catch(error => {

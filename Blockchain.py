@@ -1,9 +1,5 @@
 # Module 1 - Create a Blockchain
 
-# To be installed:
-# Flask==0.12.2: pip install Flask==0.12.2
-# Postman HTTP Client: https://www.getpostman.com/
-
 # Importing the libraries
 
 import datetime
@@ -103,7 +99,7 @@ def is_valid():
     if is_valid:
         response = {'message': 'All good. The Blockchain is valid.'}
     else:
-        response = {'message': 'Houston, we have a problem. The Blockchain is not valid.'}
+        response = {'message': 'We have a problem. The Blockchain is not valid.'}
     return jsonify(response), 200
 
 @app.route('/reset_chain', methods=['GET'])

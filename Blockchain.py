@@ -1,14 +1,9 @@
-# Module 1 - Create a Blockchain
-
-# Importing the libraries
 
 import datetime
 import hashlib
 import json
 from flask import Flask, jsonify, request
 from flask_cors import CORS
-
-# Part 1 - Building a Blockchain
 
 class Blockchain:
     def __init__(self):
@@ -58,14 +53,10 @@ class Blockchain:
             block_index += 1
         return True
 
-# Part 2 - Mining our Blockchain
-
-# Creating a Web App
 app = Flask(__name__)
 app.config['JSONIFY_PRETTYPRINT_REGULAR'] = False
 CORS(app)
 
-# Creating a Blockchain
 blockchain = Blockchain()
 
 @app.route('/mine_block', methods=['GET'])
